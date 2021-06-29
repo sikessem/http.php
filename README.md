@@ -1,14 +1,14 @@
 # HTTP Events
-SIKessEm HTTP events in PHP
+HTTP communication management in PHP
 
 
 ## Installation
 
 Use Composer to install the library with this command:
 
-`composer require sikessem/http-events`
+`composer require sikessem/http`
 
-Or [click here to download it directly in ZIP format ](https://github.com/SIKessEm/HTTPEvents.php/archive/refs/heads/main.zip)
+Or [click here to download it directly in ZIP format ](https://github.com/SIKessEm/HTTP.php/archive/refs/heads/main.zip)
 
 
 ## Usage
@@ -52,14 +52,14 @@ Please send any sensitive issue to [sikessem@omninf.com](mailto:sikessem@omninf.
 
 
 ## License
-HTTPEvents is licensed under the Apache 2.0 License - see the [LICENSE](./LICENSE) file for details.
+This package is licensed under the Apache 2.0 License - see the [LICENSE](./LICENSE) file for details.
 
 
 ## Contribution
 
 For any contribution, please follow these steps:
 
-1. Clone the repository with `git clone https://github.com/SIKessEm/HTTPEvents.php` or `git remote add origin https://github.com/SIKessEm/HTTPEvents.php` then `git branch -M main`
+1. Clone the repository with `git clone https://github.com/SIKessEm/HTTP.php` or `git remote add origin https://github.com/SIKessEm/HTTP.php` then `git branch -M main`
 2. Create a new branch. Example: `git checkout -b my_contribution`
 3. Make your changes and send them with `git push -u origin main`
 
