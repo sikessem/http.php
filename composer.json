@@ -1,9 +1,13 @@
 {
-    "name": "sikessem/http-events",
-    "description": "SIKessEm HTTP events in PHP",
+    "name": "sikessem/http",
+    "description": "HTTP communication management in PHP",
     "license": "Apache-2.0",
     "keywords": [
-        "http-events",
+        "http",
+        "client",
+        "server",
+        "request",
+        "response",
         "sikessem"
     ],
     "authors": [{
@@ -12,8 +16,8 @@
         "role": "Developer"
     }],
     "support": {
-        "source": "https://github.com/SIKessEm/HTTPEvents.php",
-        "issues": "https://github.com/SIKessEm/HTTPEvents.php/issues"
+        "source": "https://github.com/SIKessEm/HTTP.php",
+        "issues": "https://github.com/SIKessEm/HTTP.php/issues"
     },
     "require": {
         "php": ">=8.0",
@@ -21,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-          "SIKessEm\\HTTP\\Events\\": "lib/"
+          "SIKessEm\\HTTP\\": "lib/"
         }
     },
     "config": {
