@@ -13,7 +13,7 @@ class Service {
    * Create a new service
    *
    * @param Menu $menu The service menu
-   * @param callable $handle The service handler
+   * @param callable $handler The service handler
    */
   public function __construct(Menu $menu, protected callable $handler) {
     parent::__construct($menu);
