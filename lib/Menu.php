@@ -15,7 +15,7 @@ class Menu extends Sheet {
    * @return array The acessible properties list
    */
   public function accessible_properties(): array {
-      return ['services'];
+      return array_merge(parent::accessible_properties(), ['services']);
   }
 
   /**

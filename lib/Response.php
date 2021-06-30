@@ -15,7 +15,7 @@ class Response extends Message {
    * @return array The acessible properties list
    */
   public function accessible_properties(): array {
-      return parent::accessible_properties() + ['code', 'headers'];
+      return array_merge(parent::accessible_properties(), ['code', 'headers']);
   }
 
   /**

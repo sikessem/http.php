@@ -15,7 +15,7 @@ class Cart extends Sheet {
    * @return array The acessible properties list
    */
   public function accessible_properties(): array {
-      return ['commands'];
+      return array_merge(parent::accessible_properties(), ['commands']);
   }
 
   /**
