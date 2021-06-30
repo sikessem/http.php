@@ -21,7 +21,8 @@
     },
     "require": {
         "php": ">=8.0",
-        "sikessem/organizer": "dev-main"
+        "sikessem/organizer": "dev-main",
+        "sikessem/encapsulation": "dev-main"
     },
     "autoload": {
         "psr-4": {
