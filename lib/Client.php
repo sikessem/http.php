@@ -22,7 +22,7 @@ class Client extends Messenger {
   }
 
   /**
-   * @var Cart The client cart
+   * @var namespace\Cart The client cart
    */
   protected Cart $cart;
 
@@ -30,7 +30,7 @@ class Client extends Messenger {
    * Listen to client order : create a new command and add it to the client cart
    *
    * @param callable $handler The order handler
-   * @return Command The command created
+   * @return namespace\Command The command created
    */
   public function onOrder(callable $handler): Command {
     return $this->cart->command($handler);

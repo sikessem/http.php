@@ -21,7 +21,7 @@ class Menu extends Sheet {
   /**
    * Create a new menu sheet
    *
-   * @param Messenger $owner The menu owner
+   * @param namespace\Messenger $owner The menu owner
    * @param array $services Services handlers list
    */
   public function __construct(protected Messenger $owner, array $services = []) {
@@ -39,7 +39,7 @@ class Menu extends Sheet {
    * Add a new service
    *
    * @param callable $handler The service handler
-   * @return Service The service created
+   * @return namespace\Service The service created
    */
   public function service(callable $handler): Service {
     return $this->services[] = new Service($handler);

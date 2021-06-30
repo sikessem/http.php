@@ -23,7 +23,7 @@ abstract class Message {
   /**
    * Create a new message
    *
-   * @param Messenger $sender The message sender
+   * @param namespace\Messenger $sender The message sender
    */
   public function __construct(protected Messenger $sender) {}
 }

@@ -27,7 +27,7 @@ class Server extends Messenger {
   }
 
   /**
-   * @var Menu The server menu
+   * @var namespace\Menu The server menu
    */
   protected Menu $menu;
 
@@ -35,7 +35,7 @@ class Server extends Messenger {
    * Listen to server service : create a new service and add it to the server menu
    *
    * @param callable $handler The order handler
-   * @return Service The service created
+   * @return namespace\Service The service created
    */
   public function onServe(callable $handler): Service {
     return $this->menu->service($handler);

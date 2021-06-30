@@ -23,7 +23,7 @@ abstract class Sheet {
   /**
    * Create a new handlers sheet
    *
-   * @param Messenger $owner The sheet owner
+   * @param namespace\Messenger $owner The sheet owner
    * @param array $handlers The sheet handlers list
    */
   public function __construct(protected Messenger $owner) {}

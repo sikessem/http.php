@@ -21,7 +21,7 @@ class Request extends Message {
   /**
    * Create a new request
    *
-   * @param Messenger $sender The request sender
+   * @param namespace\Messenger $sender The request sender
    * @param string $method The request method
    * @param string $uri The request target
    */

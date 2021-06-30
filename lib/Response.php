@@ -21,7 +21,7 @@ class Response extends Message {
   /**
    * Create a new response
    *
-   * @param Messenger $sender The response sender
+   * @param namespace\Messenger $sender The response sender
    * @param int $code The response status code
    * @param array $headers The response headers list
    */

@@ -12,7 +12,7 @@ class Service {
   /**
    * Create a new service
    *
-   * @param Menu $menu The service menu
+   * @param namespace\Menu $menu The service menu
    * @param callable $handler The service handler
    */
   public function __construct(Menu $menu, protected callable $handler) {
@@ -22,9 +22,9 @@ class Service {
   /**
    * Process the service
    *
-   * @param Request $request The request to process
-   * @param null|Service $service The old service
-   * @return Response The response request
+   * @param namespace\Request $request The request to process
+   * @param null|namespace\Service $service The old service
+   * @return namespace\Response The response request
    */
    public function process(Request $request, ?Service $service = null): Response {
      return call_user_func($this->handler, $request, $service);

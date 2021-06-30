@@ -21,7 +21,7 @@ class Cart extends Sheet {
   /**
    * Create a new cart sheet
    *
-   * @param Messenger $owner The cart owner
+   * @param namespace\Messenger $owner The cart owner
    * @param array $commands Services handlers list
    */
   public function __construct(Messenger $owner, array $commands = []) {
@@ -39,7 +39,7 @@ class Cart extends Sheet {
    * Add a new command
    *
    * @param callable $handler The command handler
-   * @return Command The command created
+   * @return namespace\Command The command created
    */
   public function command(callable $handler): Command {
     return $this->commands[] = new Command($this, $handler);
