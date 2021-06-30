@@ -44,7 +44,7 @@ class Server extends Messenger {
 
     $service = $response = null;
     foreach($this->menu->services as $service)
-      $response = $service->process($client->order(), $service);
+      $response = $service->process($client->order($this), $service);
     return $response;
   }
 
