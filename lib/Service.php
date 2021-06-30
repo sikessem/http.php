@@ -7,7 +7,7 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Service {
+class Service extends SheetItem {
 
   /**
    * Create a new service

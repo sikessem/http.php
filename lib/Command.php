@@ -7,7 +7,7 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Command {
+class Command extends SheetItem {
 
   /**
    * Create a new command
