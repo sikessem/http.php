@@ -32,6 +32,23 @@ class Server extends Messenger {
   protected Menu $menu;
 
   /**
+   * Serve a client
+   *
+   * @param namespace\Client $client The client to serve
+   * @throws namespace\Error If no service defined
+   * @return namespace\Response The last service response
+   */
+  public function serve(Client $client): Response {
+    if(empty($this->menu->services))
+      throw new Error('No service defined', Error::NO_SERVICE);
+
+    $service = $response = null;
+    foreach($this->menu->services as $service)
+      $response = $service->process($client->order(), $service);
+    return $response;
+  }
+
+  /**
    * Listen to server service : create a new service and add it to the server menu
    *
    * @param callable $handler The order handler
