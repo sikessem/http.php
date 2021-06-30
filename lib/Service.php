@@ -23,10 +23,11 @@ class Service extends SheetItem {
    * Process the service
    *
    * @param namespace\Request $request The request to process
+   * @param null|namespace\Response $response The old response
    * @param null|namespace\Service $service The old service
-   * @return namespace\Response The response request
+   * @return namespace\Response The process response
    */
-   public function process(Request $request, ?Service $service = null): Response {
-     return call_user_func($this->handler, $request, $service);
+   public function process(Request $request, ?Response $response = null, ?Service $service = null): Response {
+     return call_user_func($this->handler, $request, $response, $service);
    }
 }
