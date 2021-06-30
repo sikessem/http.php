@@ -15,9 +15,15 @@ class Service extends SheetItem {
    * @param namespace\Menu $menu The service menu
    * @param callable $handler The service handler
    */
-  public function __construct(Menu $menu, protected callable $handler) {
+  public function __construct(Menu $menu, callable $handler) {
     parent::__construct($menu);
+    $this->handler = $handler;
   }
+
+  /**
+   * @var callable The service handler
+   */
+  protected $handler;
 
   /**
    * Process the service

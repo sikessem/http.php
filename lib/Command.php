@@ -15,9 +15,15 @@ class Command extends SheetItem {
    * @param namespace\Cart $cart The command cart
    * @param callable $handler The command handler
    */
-  public function __construct(Cart $cart, protected callable $handler) {
+  public function __construct(Cart $cart, callable $handler) {
     parent::__construct($cart);
+    $this->handler = $handler;
   }
+
+  /**
+   * @var callable The command handler
+   */
+  protected $handler;
 
   /**
    * Execute the command
