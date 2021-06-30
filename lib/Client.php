@@ -27,6 +27,23 @@ class Client extends Messenger {
   protected Cart $cart;
 
   /**
+   * Order a server
+   *
+   * @param namespace\Server $server The server to order
+   * @throws namespace\Error If no command defined
+   * @return namespace\Request The last cammand request
+   */
+  public function order(Server $server): Request {
+    if(empty($this->cart->commands))
+      throw new Error('No command defined', Error::NO_COMMAND);
+
+    $command = $request = null;
+    foreach($this->cart->commands as $command)
+      $request = $command->execute($server, $command);
+    return $request;
+  }
+
+  /**
    * Listen to client order : create a new command and add it to the client cart
    *
    * @param callable $handler The order handler
