@@ -10,6 +10,18 @@
 class Cart extends Sheet {
 
   /**
+   * Create a new cart sheet
+   *
+   * @param Messenger $owner The cart owner
+   * @param array $commands Services handlers list
+   */
+  public function __construct(Messenger $owner, array $commands = []) {
+    parent::__construct($owner);
+    foreach($commands as $command)
+      $this->command($command);
+  }
+
+  /**
    * @var array The list of commands
    */
   protected array $commands = [];
@@ -17,10 +29,10 @@ class Cart extends Sheet {
   /**
    * Add a new command
    *
-   * @param callable $callback The command handler
+   * @param callable $handler The command handler
    * @return Command The command created
    */
-  public function add(callable $handle): SheetItem {
-    return $this->commands[] = new Command($handle);
+  public function command(callable $handler): Command {
+    return $this->commands[] = new Command($this, $handler);
   }
 }

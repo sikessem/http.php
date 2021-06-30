@@ -29,10 +29,10 @@ class Client extends Messenger {
   /**
    * Listen to client order : create a new command and add it to the client cart
    *
-   * @param callable $callback The order handler
+   * @param callable $handler The order handler
    * @return Command The command created
    */
   public function onOrder(callable $handler): Command {
-    return $this->cart->add($handler);
+    return $this->cart->command($handler);
   }
 }

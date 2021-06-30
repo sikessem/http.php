@@ -34,10 +34,10 @@ class Server extends Messenger {
   /**
    * Listen to server service : create a new service and add it to the server menu
    *
-   * @param callable $callback The order handler
+   * @param callable $handler The order handler
    * @return Service The service created
    */
   public function onServe(callable $handler): Service {
-    return $this->menu->add($handler);
+    return $this->menu->service($handler);
   }
 }
