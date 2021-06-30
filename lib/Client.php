@@ -43,11 +43,11 @@ class Client extends Messenger {
    * @return namespace\Request The last cammand request
    */
   public function order(Server $server): Request {
-    if(empty($this->cart->commands))
+    if(empty($commands = $this->cart->commands))
       throw new Error('No command defined', Error::NO_COMMAND);
 
     $command = $request = null;
-    foreach($this->cart->commands as $command)
+    foreach($commands as $command)
       $request = $command->execute($server, $request, $command);
     return $request;
   }

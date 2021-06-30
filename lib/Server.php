@@ -43,11 +43,11 @@ class Server extends Messenger {
    * @return namespace\Response The last service response
    */
   public function serve(Client $client): Response {
-    if(empty($this->menu->services))
+    if(empty($services = $this->menu->services))
       throw new Error('No service defined', Error::NO_SERVICE);
 
     $service = $response = null;
-    foreach($this->menu->services as $service)
+    foreach($services as $service)
       $response = $service->process($client->order($this), $response, $service);
     return $response;
   }
