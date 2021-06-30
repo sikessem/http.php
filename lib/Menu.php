@@ -42,6 +42,6 @@ class Menu extends Sheet {
    * @return namespace\Service The service created
    */
   public function service(callable $handler): Service {
-    return $this->services[] = new Service($handler);
+    return $this->services[] = new Service($this, $handler);
   }
 }
