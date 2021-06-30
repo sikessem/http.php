@@ -23,7 +23,7 @@ class Server extends Messenger {
    */
   public function __construct(string $ip, int $port, array $handlers = []) {
     parent::__construct($ip, $port);
-    $this->card = new Menu($this, $handlers);
+    $this->menu = new Menu($this, $handlers);
   }
 
   /**
