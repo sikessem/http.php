@@ -10,6 +10,15 @@
 class Server extends Messenger {
 
   /**
+   * The server accessible properties
+   *
+   * @return array The acessible properties list
+   */
+  public function accessible_properties(): array {
+      return array_merge(parent::accessible_properties(), ['menu']);
+  }
+
+  /**
    * Create a new server
    *
    * @param string $ip The server IP address

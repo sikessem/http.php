@@ -10,6 +10,15 @@
 class Client extends Messenger {
 
   /**
+   * The client accessible properties
+   *
+   * @return array The acessible properties list
+   */
+  public function accessible_properties(): array {
+      return array_merge(parent::accessible_properties(), ['cart']);
+  }
+
+  /**
    * Create a new client
    *
    * @param string $ip The client IP address
