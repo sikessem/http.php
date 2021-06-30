@@ -7,16 +7,16 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Command extends SheetItem {
+class Command {
 
   /**
    * Create a new command
    *
-   * @param Sheet $sheet The command sheet
+   * @param Cart $cart The command cart
    * @param callable $handler The command handler
    */
-  public function __construct(Sheet $sheet, protected callable $handler) {
-    parent::__construct($sheet);
+  public function __construct(Cart $cart, protected callable $handler) {
+    parent::__construct($cart);
   }
 
   /**
