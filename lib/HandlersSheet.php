@@ -10,7 +10,7 @@
 abstract class HandlersSheet {
 
   /**
-   * Create a new cart
+   * Create a new handlers sheet
    *
    * @param Messenger $sender The cart sender
    * @param array $handlers The cart handlers list
