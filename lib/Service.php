@@ -7,16 +7,16 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Service extends SheetItem {
+class Service {
 
   /**
    * Create a new service
    *
-   * @param Sheet $sheet The service sheet
+   * @param Menu $menu The service menu
    * @param callable $handle The service handler
    */
-  public function __construct(Sheet $sheet, protected callable $handler) {
-    parent::__construct($sheet);
+  public function __construct(Menu $menu, protected callable $handler) {
+    parent::__construct($menu);
   }
 
   /**
