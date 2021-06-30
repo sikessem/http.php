@@ -21,11 +21,11 @@ class Request extends Message {
   /**
    * Create a new request
    *
-   * @param Messenger $messenger The request messenger
+   * @param Messenger $sender The request sender
    * @param string $method The request method
    * @param string $uri The request target
    */
-  public function __construct(Messenger $messenger, protected string $method, protected string $target) {
-    parent::__construct($messenger);
+  public function __construct(Messenger $sender, protected string $method, protected string $target) {
+    parent::__construct($sender);
   }
 }

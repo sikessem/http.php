@@ -21,11 +21,11 @@ class Response extends Message {
   /**
    * Create a new response
    *
-   * @param Messenger $messenger The response messenger
+   * @param Messenger $sender The response sender
    * @param int $code The response status code
    * @param array $headers The response headers list
    */
-  public function __construct(Messenger $messenger, protected int $code, protected array $headers = []) {
-    parent::__construct($messenger);
+  public function __construct(Messenger $sender, protected int $code, protected array $headers = []) {
+    parent::__construct($sender);
   }
 }

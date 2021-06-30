@@ -17,13 +17,13 @@ abstract class Message {
    * @return array The acessible properties list
    */
   public function accessible_properties(): array {
-      return ['messenger'];
+      return ['sender'];
   }
 
   /**
    * Create a new message
    *
-   * @param Messenger $messenger The message sender
+   * @param Messenger $sender The message sender
    */
-  public function __construct(protected Messenger $messenger) {}
+  public function __construct(protected Messenger $sender) {}
 }
