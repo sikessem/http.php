@@ -7,7 +7,7 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Menu extends HandlersSheet {
+class Menu extends Sheet {
 
   /**
    * @var array The list of services
@@ -20,7 +20,7 @@ class Menu extends HandlersSheet {
    * @param callable $callback The service handler
    * @return Service The service created
    */
-  public function add(callable $handle): Handler {
+  public function add(callable $handle): SheetItem {
     return $this->services[] = new Service($handle);
   }
 }

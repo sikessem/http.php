@@ -7,7 +7,7 @@
  * @package sikessem/http
  * @license Apache-2.0
  */
-class Cart extends HandlersSheet {
+class Cart extends Sheet {
 
   /**
    * @var array The list of commands
@@ -20,7 +20,7 @@ class Cart extends HandlersSheet {
    * @param callable $callback The command handler
    * @return Command The command created
    */
-  public function add(callable $handle): Handler {
+  public function add(callable $handle): SheetItem {
     return $this->commands[] = new Command($handle);
   }
 }
