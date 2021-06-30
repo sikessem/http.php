@@ -10,6 +10,15 @@
 class Cart extends Sheet {
 
   /**
+   * The cart accessible properties
+   *
+   * @return array The acessible properties list
+   */
+  public function accessible_properties(): array {
+      return ['commands'];
+  }
+
+  /**
    * Create a new cart sheet
    *
    * @param Messenger $owner The cart owner

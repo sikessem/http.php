@@ -10,6 +10,15 @@
 class Menu extends Sheet {
 
   /**
+   * The menu accessible properties
+   *
+   * @return array The acessible properties list
+   */
+  public function accessible_properties(): array {
+      return ['services'];
+  }
+
+  /**
    * Create a new menu sheet
    *
    * @param Messenger $owner The menu owner
