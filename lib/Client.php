@@ -10,15 +10,6 @@
 class Client extends Messenger {
 
   /**
-   * The client accessible properties
-   *
-   * @return array The acessible properties list
-   */
-  public function accessible_properties(): array {
-      return array_merge(parent::accessible_properties(), ['cart']);
-  }
-
-  /**
    * Create a new client
    *
    * @param string $ip The client IP address
@@ -26,14 +17,8 @@ class Client extends Messenger {
    * @param array $handlers Commands handlers list
    */
   public function __construct(string $ip, int $port, array $handlers = []) {
-    parent::__construct($ip, $port);
-    $this->cart = new Cart($this, $handlers);
+    parent::__construct($ip, $port, new Cart($this, $handlers));
   }
-
-  /**
-   * @var namespace\Cart The client cart
-   */
-  protected Cart $cart;
 
   /**
    * Order a server
@@ -43,7 +28,7 @@ class Client extends Messenger {
    * @return namespace\Request The last cammand request
    */
   public function order(Server $server): Request {
-    if(empty($commands = $this->cart->commands))
+    if(empty($commands = $this->sheet->commands))
       throw new Error('No command defined', Error::NO_COMMAND);
 
     $command = $request = null;
@@ -53,12 +38,12 @@ class Client extends Messenger {
   }
 
   /**
-   * Listen to client order : create a new command and add it to the client cart
+   * Listen to client order : create a new command and add it to the client sheet
    *
    * @param callable $handler The order handler
    * @return namespace\Command The command created
    */
   public function onOrder(callable $handler): Command {
-    return $this->cart->command($handler);
+    return $this->sheet->command($handler);
   }
 }

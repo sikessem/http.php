@@ -19,7 +19,7 @@ abstract class Messenger {
    * @return array The acessible properties list
    */
   public function accessible_properties(): array {
-    return ['ip', 'port'];
+    return ['ip', 'port', 'sheet'];
   }
 
   /**
@@ -27,6 +27,7 @@ abstract class Messenger {
    *
    * @param string $ip The messenger IP address
    * @param int $port The port used by the messenger
+   * @param namespace\Sheet $sheet The messenger sheet
    */
-  public function __construct(protected string $ip, protected int $port) {}
+  public function __construct(protected string $ip, protected int $port, protected Sheet $sheet) {}
 }

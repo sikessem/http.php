@@ -10,15 +10,6 @@
 class Server extends Messenger {
 
   /**
-   * The server accessible properties
-   *
-   * @return array The acessible properties list
-   */
-  public function accessible_properties(): array {
-      return array_merge(parent::accessible_properties(), ['menu']);
-  }
-
-  /**
    * Create a new server
    *
    * @param string $ip The server IP address
@@ -26,14 +17,8 @@ class Server extends Messenger {
    * @param array $handlers Services handlers list
    */
   public function __construct(string $ip, int $port, array $handlers = []) {
-    parent::__construct($ip, $port);
-    $this->menu = new Menu($this, $handlers);
+    parent::__construct($ip, $port, new Menu($this, $handlers));
   }
-
-  /**
-   * @var namespace\Menu The server menu
-   */
-  protected Menu $menu;
 
   /**
    * Serve a client
@@ -43,7 +28,7 @@ class Server extends Messenger {
    * @return namespace\Response The last service response
    */
   public function serve(Client $client): Response {
-    if(empty($services = $this->menu->services))
+    if(empty($services = $this->sheet->services))
       throw new Error('No service defined', Error::NO_SERVICE);
 
     $service = $response = null;
@@ -53,12 +38,12 @@ class Server extends Messenger {
   }
 
   /**
-   * Listen to server service : create a new service and add it to the server menu
+   * Listen to server service : create a new service and add it to the server sheet
    *
    * @param callable $handler The order handler
    * @return namespace\Service The service created
    */
   public function onServe(callable $handler): Service {
-    return $this->menu->service($handler);
+    return $this->sheet->service($handler);
   }
 }
