@@ -9,6 +9,17 @@
  */
 abstract class Sheet {
 
+  use \SIKessEm\Encapsulation\Accessor;
+
+  /**
+   * The sheet accessible properties
+   *
+   * @return array The acessible properties list
+   */
+  public function accessible_properties(): array {
+      return ['owner'];
+  }
+
   /**
    * Create a new handlers sheet
    *
