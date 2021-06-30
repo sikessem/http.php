@@ -9,8 +9,6 @@
  */
 class Request extends Message {
 
-  use \SIKessEm\Encapsulation\Accessor;
-
   /**
    * The request accessible properties
    *

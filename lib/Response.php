@@ -9,8 +9,6 @@
  */
 class Response extends Message {
 
-  use \SIKessEm\Encapsulation\Accessor;
-
   /**
    * The response accessible properties
    *
