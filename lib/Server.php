@@ -10,11 +10,6 @@
 class Server extends Messenger {
 
   /**
-   * @var Menu The server menu
-   */
-  protected Menu $menu;
-
-  /**
    * Create a new server
    *
    * @param string $ip The server IP address
