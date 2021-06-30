@@ -1,4 +1,5 @@
 <?php namespace SIKessEm\HTTP;
+
 /**
  * Handlers sheet class
  *
