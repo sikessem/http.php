@@ -39,7 +39,7 @@ class Client extends Messenger {
 
     $command = $request = null;
     foreach($this->cart->commands as $command)
-      $request = $command->execute($server, $command);
+      $request = $command->execute($server, $request, $command);
     return $request;
   }
 

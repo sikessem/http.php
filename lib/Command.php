@@ -23,10 +23,11 @@ class Command extends SheetItem {
    * Execute the command
    *
    * @param null|namespace\Server $server The server to order
+   * @param null|namespace\Request $request The old request
    * @param null|namespace\Command $command The old command
    * @return namespace\Request The command request
    */
-  public function execute(Server $server, ?Command $command = null): Request {
-    return call_user_func($this->handler, $server, $command);
+  public function execute(Server $server, ?Request $request = null, ?Command $command = null): Request {
+    return call_user_func($this->handler, $server, $request, $command);
   }
 }
