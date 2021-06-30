@@ -1,5 +1,6 @@
-# HTTP Events
-HTTP communication management in PHP
+# HTTP communication management in PHP
+
+Manage the sending and receiving of messages via the HTTP communication protocol easily with the PHP language by means of event handlers.
 
 
 ## Installation
