@@ -12,12 +12,13 @@
     ],
     "authors": [{
         "name": "SIGUI kessé Emmanuel",
-        "email": "sikessem@omninf.com",
+        "homepage": "https://sikessem.com/",
+        "email": "contact@sikessem.com",
         "role": "Developer"
     }],
     "support": {
-        "source": "https://github.com/SIKessEm/HTTP.php",
-        "issues": "https://github.com/SIKessEm/HTTP.php/issues"
+        "source": "https://github.com/SIKessEm/http.php",
+        "issues": "https://github.com/SIKessEm/http.php/issues"
     },
     "require": {
         "php": ">=8.0",
@@ -27,11 +28,10 @@
     },
     "autoload": {
         "psr-4": {
-          "SIKessEm\\HTTP\\": "lib/"
+          "SIKessEm\\HTTP\\": "source/"
         }
     },
     "config": {
-        "vendor-dir": "pkg",
         "preferred-install": "dist",
         "sort-packages": true
     },
