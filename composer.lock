@@ -1,0 +1,175 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f61fb12a2f7c16db9b0899c3fd401fbb",
+    "packages": [
+        {
+            "name": "sikessem/encapsulation",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SIKessEm/Encapsulation.php.git",
+                "reference": "1f5d89e9bda8b4b37e63929e2d5bbeee54ef5b87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SIKessEm/Encapsulation.php/zipball/1f5d89e9bda8b4b37e63929e2d5bbeee54ef5b87",
+                "reference": "1f5d89e9bda8b4b37e63929e2d5bbeee54ef5b87",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SIKessEm\\Encapsulation\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SIGUI kessé Emmanuel",
+                    "email": "sikessem@omninf.com",
+                    "homepage": "https://sikessem.omninf.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Apply the encapsulation principle on PHP classes",
+            "keywords": [
+                "access-properties",
+                "encapsulate",
+                "encapsulation",
+                "mutate-properties",
+                "sikessem"
+            ],
+            "support": {
+                "issues": "https://github.com/SIKessEm/Encapsulation/issues",
+                "source": "https://github.com/SIKessEm/Encapsulation"
+            },
+            "time": "2021-06-29T10:16:16+00:00"
+        },
+        {
+            "name": "sikessem/events",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SIKessEm/Events.php.git",
+                "reference": "b054c0b36d1fd1613e188caff93cf911a76bf4d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SIKessEm/Events.php/zipball/b054c0b36d1fd1613e188caff93cf911a76bf4d4",
+                "reference": "b054c0b36d1fd1613e188caff93cf911a76bf4d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SIKessEm\\Events\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SIGUI kessé Emmanuel",
+                    "email": "sikessem@omninf.com",
+                    "homepage": "https://sikessem.omninf.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage events in PHP",
+            "keywords": [
+                "emit-event",
+                "event-emitter",
+                "event-listener",
+                "events",
+                "listen-event",
+                "sikessem"
+            ],
+            "support": {
+                "issues": "https://github.com/SIKessEm/Events/issues",
+                "source": "https://github.com/SIKessEm/Events"
+            },
+            "time": "2021-06-29T10:12:44+00:00"
+        },
+        {
+            "name": "sikessem/organizer",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SIKessEm/Organizer.git",
+                "reference": "44de6bfed61c5015ad1039e6e17fefca3f74c825"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SIKessEm/Organizer/zipball/44de6bfed61c5015ad1039e6e17fefca3f74c825",
+                "reference": "44de6bfed61c5015ad1039e6e17fefca3f74c825",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SIGUI kessé Emmanuel",
+                    "email": "sikessem@omninf.com",
+                    "homepage": "https://sikessem.omninf.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP file manager",
+            "homepage": "https://github.com/SIKessEm/Organizer#readme",
+            "keywords": [
+                "Organizer",
+                "filesystem",
+                "sikessem"
+            ],
+            "support": {
+                "issues": "https://github.com/SIKessEm/Organizer/issues",
+                "source": "https://github.com/SIKessEm/Organizer"
+            },
+            "time": "2021-07-06T06:08:45+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "sikessem/organizer": 20,
+        "sikessem/events": 20,
+        "sikessem/encapsulation": 20
+    },
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
